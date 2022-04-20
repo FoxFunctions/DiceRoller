@@ -1,32 +1,16 @@
 ﻿public static class Program
 {
     static Random diceRoll = new Random();
+    static bool runAgain = true;
 
     public static void Main()
     {
         Console.WriteLine("Welcome to the Grand Circus Casino!");
 
-        while (true)
+        while (runAgain)
         {
             DiceGame();
-
-            Console.WriteLine("Would you like to roll again with a different dice? please enter y/n");
-            string response = Console.ReadLine().ToLower().Trim();
-
-            if (response == "y")
-            {
-                continue;
-            }
-            else if (response == "n")
-            {
-                Console.WriteLine("Goodbye.");
-                break;
-            }
-            else
-            {
-                Console.WriteLine("Sorry, I didn't get that. Please try again.");
-                continue;
-            }
+            runAgain = RunAgain();
         }
     }
     public static void RollDice(int roll)
@@ -110,6 +94,27 @@
                 Console.WriteLine("Sorry, I didn't get that. Please try again.");
                 continue;
             }
+        }
+    }
+
+    public static bool RunAgain()
+    {
+        Console.WriteLine("Would you like to roll again with a different dice? please enter y/n");
+        string response = Console.ReadLine().ToLower().Trim();
+
+        if (response == "y")
+        {
+            return true;
+        }
+        else if (response == "n")
+        {
+            Console.WriteLine("Goodbye.");
+            return false;
+        }
+        else
+        {
+            Console.WriteLine("Sorry, I didn't get that. Please try again.");
+            return RunAgain();
         }
     }
 }
