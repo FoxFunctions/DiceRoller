@@ -13,7 +13,7 @@
             runAgain = RunAgain();
         }
     }
-    public static void RollDice(int roll)
+    public static void RollDiceAndPrintResult(int roll)
     {
         int firstRoll = diceRoll.Next(1, roll+1);
         int secondRoll = diceRoll.Next(1, roll+1);
@@ -48,6 +48,10 @@
         {
             Console.WriteLine("You rolled for crit!");
         }
+        else if (roll == 20 && firstRoll == 20 && secondRoll == 20)
+        {
+            Console.WriteLine("HOLY SMOKES THAT'S A DOUBLE CRIT! THERE IS ONLY A 0.25% CHANCE OF THIS HAPPENING!");
+        }
     }
     public static void DiceGame()
     {       int i;
@@ -77,7 +81,7 @@
         }
         while (true)
         {
-            RollDice(i);
+            RollDiceAndPrintResult(i);
             Console.WriteLine("Would you like to roll again? please enter y/n");
             string response = Console.ReadLine().ToLower().Trim();
 
