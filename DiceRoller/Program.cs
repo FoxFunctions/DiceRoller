@@ -4,7 +4,30 @@
 
     public static void Main()
     {
-        DiceGame();
+        Console.WriteLine("Welcome to the Grand Circus Casino!");
+
+        while (true)
+        {
+            DiceGame();
+
+            Console.WriteLine("Would you like to roll again with a different dice? please enter y/n");
+            string response = Console.ReadLine().ToLower().Trim();
+
+            if (response == "y")
+            {
+                continue;
+            }
+            else if (response == "n")
+            {
+                Console.WriteLine("Goodbye.");
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Sorry, I didn't get that. Please try again.");
+                continue;
+            }
+        }
     }
     public static void RollDice(int roll)
     {
@@ -18,6 +41,10 @@
             Console.WriteLine("Snake Eyes! Two 1s");
         }
         else if (roll == 6 && firstRoll == 1 && secondRoll == 2)
+        {
+            Console.WriteLine("Ace Deuce: A 1 and 2");
+        }
+        else if (roll == 6 && firstRoll == 2 && secondRoll == 1)
         {
             Console.WriteLine("Ace Deuce: A 1 and 2");
         }
@@ -44,10 +71,11 @@
         {
             try
             {
-                Console.WriteLine("How many sided die would you like to roll? Please enter a whole number greater than or equal to 1");
+                
+                Console.WriteLine("How many sided die would you like to roll? Please enter a whole number greater than 1");
                 i = int.Parse(Console.ReadLine());
                 
-                if (i >= 1)
+                if (i > 1)
                 {
                     break;
                 }
