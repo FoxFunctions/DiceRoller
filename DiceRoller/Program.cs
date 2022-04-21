@@ -26,38 +26,23 @@
             {
                 Console.WriteLine("Snake Eyes! Two 1s");
             }
-        }
-        if (roll == 6)
-        {
-            if (firstRoll == 1 && secondRoll == 2)
+            else if (firstRoll == 1 && secondRoll == 2)
             {
                 Console.WriteLine("Ace Deuce: A 1 and 2");
             }
-        }
-        if (roll == 6)
-        {
-            if(firstRoll == 2 && secondRoll == 1)
+            else if (firstRoll == 2 && secondRoll == 1)
             {
                 Console.WriteLine("Ace Deuce: A 1 and 2");
             }
-        }
-        if (roll == 6)
-        {
-           if (firstRoll == 6 && secondRoll == 6)
+            else if (firstRoll == 6 && secondRoll == 6)
             {
                 Console.WriteLine("Box Cars: Two 6s");
             }
-        }
-        if (roll ==6)
-        { 
-            if (firstRoll + secondRoll == 7 || firstRoll + secondRoll == 11)
+            else if (firstRoll + secondRoll == 7 || firstRoll + secondRoll == 11)
             {
                 Console.WriteLine("Win: A total of 7 or 11");
-            } 
-        }
-        if (roll == 6)
-        {
-            if (firstRoll + secondRoll == 2 || firstRoll + secondRoll == 3 || firstRoll + secondRoll == 12)
+            }
+            else if (firstRoll + secondRoll == 2 || firstRoll + secondRoll == 3 || firstRoll + secondRoll == 12)
             {
                 Console.WriteLine("Craps: A total of 2, 3, or 12");
             }
