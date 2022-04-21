@@ -17,8 +17,8 @@
     {
         int firstRoll = diceRoll.Next(1, roll+1);
         int secondRoll = diceRoll.Next(1, roll+1);
-        Console.WriteLine($"You rolled a {firstRoll} and a {secondRoll} ");
-        Console.WriteLine($"You rolled for a total of {firstRoll+secondRoll}");
+        Console.WriteLine($"You rolled a {firstRoll} and a {secondRoll}.");
+        Console.WriteLine($"You rolled for a total of {firstRoll+secondRoll}.");
 
         if (roll == 6)
         {
@@ -61,7 +61,6 @@
             {
                 Console.WriteLine("Craps: A total of 2, 3, or 12");
             }
-            Console.WriteLine("Craps: A total of 2, 3, or 12");
         }
         if (roll == 10)
         {
@@ -79,7 +78,7 @@
         }
     }
     public static void DiceGame()
-    {       int i;
+    {   int i;
         while (true)
         {
             try
