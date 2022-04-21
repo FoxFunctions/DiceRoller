@@ -20,37 +20,62 @@
         Console.WriteLine($"You rolled a {firstRoll} and a {secondRoll} ");
         Console.WriteLine($"You rolled for a total of {firstRoll+secondRoll}");
 
-        if (roll == 6 && firstRoll == 1 && secondRoll == 1)
+        if (roll == 6)
         {
-            Console.WriteLine("Snake Eyes! Two 1s");
+            if (firstRoll == 1 & secondRoll == 1)
+            {
+                Console.WriteLine("Snake Eyes! Two 1s");
+            }
         }
-        else if (roll == 6 && firstRoll == 1 && secondRoll == 2)
+        if (roll == 6)
         {
-            Console.WriteLine("Ace Deuce: A 1 and 2");
+            if (firstRoll == 1 && secondRoll == 2)
+            {
+                Console.WriteLine("Ace Deuce: A 1 and 2");
+            }
         }
-        else if (roll == 6 && firstRoll == 2 && secondRoll == 1)
+        if (roll == 6)
         {
-            Console.WriteLine("Ace Deuce: A 1 and 2");
+            if(firstRoll == 2 && secondRoll == 1)
+            {
+                Console.WriteLine("Ace Deuce: A 1 and 2");
+            }
         }
-        else if (roll == 6 && firstRoll == 6 && secondRoll == 6)
+        if (roll == 6)
         {
-            Console.WriteLine("Box Cars: Two 6s");
+           if (firstRoll == 6 && secondRoll == 6)
+            {
+                Console.WriteLine("Box Cars: Two 6s");
+            }
         }
-        else if (roll ==6 && firstRoll + secondRoll == 7 || firstRoll + secondRoll == 11)
-        {
-            Console.WriteLine("Win: A total of 7 or 11");
+        if (roll ==6)
+        { 
+            if (firstRoll + secondRoll == 7 || firstRoll + secondRoll == 11)
+            {
+                Console.WriteLine("Win: A total of 7 or 11");
+            } 
         }
-        else if (roll == 6 && firstRoll + secondRoll == 2 || firstRoll + secondRoll == 3 || firstRoll + secondRoll == 12)
+        if (roll == 6)
         {
+            if (firstRoll + secondRoll == 2 || firstRoll + secondRoll == 3 || firstRoll + secondRoll == 12)
+            {
+                Console.WriteLine("Craps: A total of 2, 3, or 12");
+            }
             Console.WriteLine("Craps: A total of 2, 3, or 12");
         }
-        else if (roll == 10 && firstRoll + secondRoll == 20)
+        if (roll == 10)
         {
-            Console.WriteLine("You rolled for crit!");
+            if (firstRoll == 10 && secondRoll == 10)
+            {
+                Console.WriteLine("You rolled for crit!");
+            }
         }
-        else if (roll == 20 && firstRoll == 20 && secondRoll == 20)
+        if (roll == 20)
         {
-            Console.WriteLine("HOLY SMOKES THAT'S A DOUBLE CRIT! THERE IS ONLY A 0.25% CHANCE OF THIS HAPPENING!");
+            if (firstRoll == 20 && secondRoll == 20)
+            {
+                Console.WriteLine("HOLY SMOKES THAT'S A DOUBLE CRIT! THERE IS ONLY A 0.25% CHANCE OF THIS HAPPENING!");
+            }
         }
     }
     public static void DiceGame()
@@ -59,7 +84,6 @@
         {
             try
             {
-                
                 Console.WriteLine("How many sided die would you like to roll? Please enter a whole number greater than 1");
                 i = int.Parse(Console.ReadLine());
                 
@@ -100,7 +124,6 @@
             }
         }
     }
-
     public static bool RunAgain()
     {
         Console.WriteLine("Would you like to roll again with a different dice? please enter y/n");
