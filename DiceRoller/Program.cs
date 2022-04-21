@@ -22,7 +22,7 @@
 
         if (roll == 6)
         {
-            if (firstRoll == 1 & secondRoll == 1)
+            if (firstRoll == 1 && secondRoll == 1)
             {
                 Console.WriteLine("Snake Eyes! Two 1s");
             }
